@@ -43,6 +43,7 @@ body {
 
 .section {
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .container {
@@ -232,7 +233,6 @@ body {
     height: 100vh;
     width: 100%;
     background-color: var(--red);
-    background-attachment: fixed;
 }
 
 @keyframes kessy {
@@ -274,7 +274,7 @@ body {
 
 .container-img-back {
     background-image: url(../img/bckg5.png);
-    background-attachment: fixed;
+    background-attachment: fixed; 
 }
 
 .kessy3-block {
@@ -466,11 +466,6 @@ body {
     font-weight: 800;
     font-size: 18px;
     padding: 5px;
-    transition: all 0.1s ease-in-out;
-}
-
-.forbes-a:hover {
-    font-size: 19px;
 }
 
 .concert-grid-card-subtitle1 {
@@ -486,7 +481,7 @@ body {
     background-color: var(--black);
     background-size: 110%;
     overflow-x: hidden;
-    background-attachment: fixed;
+    background-attachment: fixed; 
 }
 
 .news-scroll-container {
@@ -640,8 +635,8 @@ body {
 .check {
     appearance: none;
     position: relative;
-    width: 25px;
-    height: 25px;
+    min-width: 25px;
+    min-height: 25px;
     background: #ffffff65;
     transition: 0.5s;
 }
@@ -680,7 +675,7 @@ body {
     background-size: 110%;
     height: 100vh;
     width: 100%;
-    background-attachment: fixed; 
+    background-attachment: fixed;
 }
 
 .footer-content {
@@ -986,9 +981,10 @@ body {
             font-weight: 100;
         }
         .form {
-            width: 350px;
+            width: 90%;
+            max-width: 350px; 
             gap: 20px;
-        }
+        }  
         .form-btn {
             font-size: 16px;
             padding: 15px 0;
@@ -997,16 +993,16 @@ body {
             font-size: 16px;
         }
         .checkbox-text {
-            width: 60%;
+            width: auto; 
             text-align: left;
             word-wrap: break-word;
         }
         .checkbox-flex {
-            width: 150%;
-            margin-left: -10px;
+            width: 100%; 
+            margin-left: 0; 
             margin-top: 30px;
             gap: 10px;
-            justify-content: center;
+            justify-content: flex-start; 
         }
         .container-black {
             display: flex;
@@ -1034,4 +1030,36 @@ body {
             height: fit-content;
             padding-bottom: 50px;
         } 
+        .concert-grid-card-animation, .concert-grid-card-animation2, .concert-grid-card-animation3 {
+            animation: none;
+        }
+}
+
+@media screen and (max-width:450px) {
+    .container-img-kessy {
+        margin-left: 0;
+        transform: none;
+        margin-top: 0;
+    }
+
+    .container-img-kessy-animation {
+        animation: none;
+    }
+    
+    .container-img-logo {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 150px;
+        margin-top: 20px;
+    }
+    .menu-list {
+       padding-left: 0px; 
+    }
+    .menu-title {
+        left: 150px;
+    }
+    .menu-text {
+        display: none;
+    }
 }

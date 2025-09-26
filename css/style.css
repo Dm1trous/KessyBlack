@@ -1,0 +1,889 @@
+/* шрифты */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+	font-family: 'AKONY-Bold';
+	src: url('../fonts/akony-bold.woff2') format('woff2')
+}
+
+/* сброс стилей */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* стандартные настройки */
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+:root {
+    --black: #000000;
+    --red: rgb(255, 0 , 0)
+}
+
+/* стилизация контента */
+.section {
+    overflow-y: hidden;
+}
+
+.container {
+    background-color: var(--red);
+    width: 100%;
+    height: 100vh;
+    z-index: -3;
+}
+
+.container-content {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* кнопка бургер */
+.burger-checkbox {
+    position: absolute;
+    visibility: hidden;
+  }
+  .burger {
+    position: relative;
+    z-index: 101;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 26px;
+    top: 50vh;
+  }
+  .burger::before,
+  .burger::after {
+    content: '';
+    left: 20px;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: #fff;
+  }
+  .burger::before {
+    top: 0;
+    box-shadow: 0 11px 0 #fff;
+    transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+  }
+  .burger::after {
+    bottom: 0;
+    transition: bottom .3s .15s, transform .3s;
+  }
+  .burger-checkbox:checked + .burger::before {
+    top: 11px;
+    transform: rotate(45deg);
+    box-shadow: 0 6px 0 rgba(0,0,0,0);
+    transition: box-shadow .15s, top .3s, transform .3s .15s;
+  }
+  .burger-checkbox:checked + .burger::after {
+    bottom: 11px;
+    transform: rotate(-45deg);
+    transition: bottom .3s, transform .3s .15s;
+  }
+  .menu-list {
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 42px 0;
+    margin: 0;
+    background: #000;
+    list-style-type: none;
+    transform: translateX(-100%);
+    transition: .3s;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    padding-left: 150px;
+    justify-content: center;
+  }
+  .menu-item {
+    display: block;
+    padding: 8px;
+    color: #ffffff65;
+    font-size: 32px;
+    text-align: left;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  .menu-text {
+    position: absolute;
+    margin-top: 150px;
+  }
+  .menu-title {
+    position: absolute;
+    top: 50px;
+    left: 300px;
+  }
+  .menu-item:hover {
+    color: #ff0000;
+  }
+  .burger-checkbox:checked ~ .menu-list {
+    transform: translateX(0);
+  }
+
+  .socials1 {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-top: 100px;
+  }
+  
+  .line {
+    width: 3px;
+    height: 400px;
+    background-color: #ffffff27;
+    position: absolute;
+    top: 300px;
+    left: 100px;
+  }
+
+/* первый блок */
+.container-img-backg {
+    position: absolute;
+    left: 0;
+    height: 100vh;
+    width: 70%;
+}
+
+.container-img-logo {
+    position: absolute;
+    top: 50px;
+    left: 140px;
+    z-index: 11;
+    width: 200px;
+}
+
+.container-img-kessy {
+    position: absolute;
+    bottom: 0;
+    width: 30%;
+    z-index: 10;
+    left: 350px;
+}
+
+.container-img-kessy-animation {
+    animation: kessy 2s ease-in-out;
+}
+
+.container-content1 {
+    background-image: url(../img/bkcg1.png);
+    background-repeat: no-repeat;
+    background-size: 60%;
+    height: 100vh;
+    width: 100%;
+}
+
+@keyframes kessy {
+    0% {
+        margin-left: 1000px;
+        display: none;
+        opacity: 0;
+    }
+    40% {
+        display: none;
+        opacity: 0;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+/* второй блок */
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+}
+
+.black {
+    background-color: var(--black);
+    width: 100%;
+    height: 100%;
+    padding: 0px 140px;
+}
+
+.container-title {
+    font-size: 31px;
+    padding: 100px 0 80px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.container-text {
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.container-img-kessy2 {
+    width: 500px;
+    margin-left: 150px;
+}
+
+/* третий блок */
+.container-img-backg2 {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+.container-img-back {
+    background-image: url(../img/kessy3.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0px -850px;
+}
+
+.container-img-kessy3 {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.container-img-play {
+    width: 30px;
+    position: relative;
+    z-index: 9999;
+}
+
+.container-img-play:hover {
+    cursor: pointer;
+}
+
+
+.disc {
+    width: 80%;
+    padding: 20px;
+    background-color: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.disc:hover {
+    scale: 1.03;
+}
+
+.disc-flex1 {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.disc-text, .disc-time{
+    font-weight: bold;
+}
+
+.disc-time {
+    color: grey;
+}
+
+.audio {
+    opacity: 0;
+    position: absolute;
+}
+
+/* четвертый блок */
+.container-img-back2 {
+    background-image: url(../img/bckg2.png);
+    background-color: var(--black);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.container-title-center {
+    text-align: center;
+    font-weight: 800;
+}
+
+.concert-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.concert-grid-card {
+    text-align: center;
+    background-color: #ff0000b0;
+    height: fit-content;
+}
+
+.concert-grid-card-animation {
+    animation: concert-card1 2s ease-in-out;
+}
+
+.concert-grid-card-animation2 {
+    animation: concert-card2 3s ease-in-out;
+}
+
+.concert-grid-card-animation3 {
+    animation: concert-card3 3.5s ease-in-out;
+}
+
+
+@keyframes concert-card1 {
+    0% {
+        opacity: 0;
+    }
+    30% {
+        opacity: 0;
+    }
+}
+
+@keyframes concert-card2 {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes concert-card3 {
+    0% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 0;
+    }
+}
+
+.concert-grid-card-red {
+    background-color: #ff0000;
+}
+
+.container-content2 {
+    width: 85%;
+}
+
+.concert-grid-card-title {
+    font-size: 100px;
+    font-weight: 800;
+    padding: 20px;
+}
+
+.concert-grid-card-subtitle {
+    font-size: 45px;
+    font-weight: 800;
+    padding: 0px 0 10px;
+}
+
+.concert-grid-card-text {
+    color: #ffffffa6;
+    padding: 0 80px;
+}
+
+.concert-grid-card-text1 {
+    padding-bottom: 60px;
+}
+
+.btn {
+    color: white;
+    background-color: #00000027;
+    padding: 30px 0;
+    margin: 50px 25px;
+    bottom: 30px;
+    display: block;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+/* пятый блок */
+.forbes-a {
+    display: flex;
+    justify-content: end;
+    margin: 30px 90px 0;
+    color: #fff;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.concert-grid-card-subtitle1 {
+    margin-bottom: 50px;
+    margin: 80px 80px 0px;
+    padding: 20px;
+    background-color: #ffffff27;
+}
+
+/* шестой блок */
+.container-img-back3 {
+    background-image: url(../img/bckg3.png);
+    background-color: var(--black);
+    background-repeat: no-repeat;
+    background-size: 110%;
+}
+
+.concert-grid-card-subtitle2 {
+    text-align: left;
+    font-size: 28px;
+    margin: 80px 80px 0px;
+    padding: 20px;
+    background-color: #ffffff27;
+}
+
+.concert-grid-card-text2 {
+    text-align: left;
+    color: #fff;
+}
+
+.news-date {
+    display: flex;
+    padding-left: 80px;
+    margin-top: 15px;
+}
+
+
+/* седьмой блок */
+.title-black {
+    font-weight: 800;
+    font-size: 500px;
+    color: #00000027;
+    user-select: none;
+    text-align: center;   
+}
+
+.title-black-animation {
+    animation: title-black 2s ease-in-out;
+}
+
+@keyframes title-black {
+    0% {
+        margin-left: -2000px;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+.form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.black-email {
+    text-align: center;
+    background: transparent;
+    border: none;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 25px 0;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+.black-email::placeholder {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 100;
+}
+
+.form-btn {
+    background-color: #000000;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 25px 0;
+    border: none;
+}
+
+.form-btn:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: 0.2s ease-in-out;
+}
+
+.checkbox-flex {
+    display: flex;
+    align-items: center;
+    width: 180%;
+    margin-left: -40px;
+    margin-top: 30px;
+    gap: 15px;
+}
+
+.checkbox-text {
+    color: #ffffffa6;
+}
+
+.check {
+    appearance: none;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background: #ffffff65;
+    transition: 0.5s;
+}
+
+.check::after {
+    content: "\2714";
+    position: absolute;
+    top: -5px;
+    left: 2px;
+    width: 0px;
+    height: 0px;
+    font-size: 26px;
+    transition: 0.5s;
+    overflow: hidden;
+    color: #fff;
+}
+
+.check:checked::after {
+    width: 30px;
+    height: 30px;
+    transition: 500ms;
+}
+
+.check:hover {
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    transform: scale(1.1);
+}
+
+/* подвал */
+.footer {
+    background-image: url(../img/bckg4.png);
+    background-color: var(--black);
+    background-repeat: no-repeat;
+    background-size: 110%;
+    height: 100vh;
+    width: 100%;
+}
+
+.footer-content {
+    padding-top: 300px;
+}
+
+.footer-text {
+    text-align: center;
+    padding: 0px 0 40px;
+}
+
+.footer-text:hover {
+    scale: 1.1;
+}
+
+.footer-title {
+    margin-bottom: -20px;
+}
+
+.socials {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.social-img {
+    width: 30px;
+}
+
+.footer-text2 {
+    margin-top: 250px;
+    color: #ffffffa6;
+}
+
+.social-img:hover {
+    scale: 1.1;
+    
+}
+
+.footer-text2:hover {
+    scale: 1;
+}
+
+/* адаптация */
+@media screen and (max-width:1800px) {
+    .container-img-back {
+        background-position: 0px -800px;
+    } 
+    .container-img-back2 {
+        background-size: 110%;
+    }
+    .title-black {
+        font-size: 400px;
+    }
+}
+
+@media screen and (max-width:1536px) {
+    .container-img-back {
+        background-position: 0px -650px;
+    } 
+    .line {
+        top: 250px;
+      }
+      .menu-text {
+        position: absolute;
+        margin-top: 50px;
+      }
+      .container-title {
+        font-size: 31px;
+        padding: 60px 0 30px;
+    }
+        .container-text {
+            font-size: 14px;
+            line-height: 30px;
+    }
+    .container-content {
+        width: 80%;
+    }
+    .black {
+        padding: 0px 80px;
+    }
+    .concert-grid-card-title {
+        font-size: 70px;
+        padding: 10px;
+    }
+    .concert-grid-card-subtitle {
+        font-size: 30px;
+    }
+    .concert-grid-card-text1 {
+        font-size: 14px;
+    }
+    .concert-grid-card-text {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+    .forbes-a {
+        justify-content: center;
+    }
+    .concert-grid-card-subtitle2 {
+        font-size: 28px;
+        margin: 30px 30px 0px;
+        padding: 20px;
+        background-color: #ffffff27;
+    }
+    .title-black {
+        font-size: 300px;
+    }
+}
+
+@media screen and (max-width:1366px) {
+      .line {
+        top: 200px;
+      }
+      .container-title {
+        font-size: 31px;
+        padding: 60px 0 30px;
+    }
+    .disc {
+        padding: 10px;
+        background-color: var(--black);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 15px 0;
+    }
+    .concert-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .container-content {
+        width: 90%;
+    }
+    .btn {
+        margin: 10px 25px;
+        bottom: 30px;
+        font-size: 18px;
+    }
+    .container-title {
+        font-size: 28px;
+        padding: 20px 0 20px;
+    }
+}
+
+@media screen and (max-width:1280px) {
+      .container-title {
+        font-size: 28px;
+        padding: 30px 0 10px;
+    }
+        .container-text {
+            font-size: 14px;
+            line-height: 30px;
+    }
+    .container-img-back {
+        background-position: 0px -550px;
+    } 
+}
+
+@media screen and (max-width:1000px) {
+    .container-content1 {
+        background: transparent;
+    }
+    .container-img-kessy {
+        width: 80%;
+        z-index: 10;
+        left: 50px;
+    }
+    .line {
+        display: none;
+    }
+    .menu-list {
+        padding-left: 100px;
+      }
+      .container-grid {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+      }
+        .container-img-kessy2 {
+            display: none;
+        }
+        .black {
+            padding: 40px 20px;
+        }
+        .burger {
+            top: 50px;
+          }
+          .container-title {
+            font-size: 31px;
+            padding: 30px 0 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        .grid-none {
+            display: none;
+        }
+        .discs {
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .concert-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .concert-grid-card-title {
+            font-size: 40px;
+            padding: 10px;
+        }
+        
+        .concert-grid-card-subtitle {
+            font-size: 25px;
+            font-weight: 800;
+            padding: 0px 0 10px;
+        }
+        
+        .concert-grid-card-text {
+            padding: 0 5px 10px;
+        }
+        .container-img-back2 {
+            background-repeat: repeat;
+            height: fit-content;
+            padding-bottom: 20px;
+        }
+        .container-smi {
+            background-size: 100%;
+            height: fit-content;
+            padding-bottom: 20px;
+        }
+        .forbes-a {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        .concert-grid-card-subtitle1 {
+            margin-bottom: 10px;
+        }
+        .concert-grid-card-subtitle2 {
+            text-align: center;
+            margin: 10px 5px 0px;
+        }
+        .news-date {
+            margin-top: -10px;
+            justify-content: end;
+        }
+        .container-img-back3 {
+            background-repeat: repeat;
+            background-size: 110%;
+            height: fit-content;
+            padding-bottom: 20px;
+        }
+        .title-black {
+            font-size: 100px;
+        }  
+        .black-email {
+            padding: 15px 0;
+            font-size: 16px;
+            font-weight: 100;
+        }
+        .form {
+            width: 350px;
+            gap: 20px;
+        }
+        .form-btn {
+            font-size: 16px;
+            padding: 15px 0;
+        }  
+        .black-email::placeholder {
+            font-size: 16px;
+        }
+        .checkbox-text {
+            width: 60%;
+            text-align: left;
+        }
+        .checkbox-flex {
+            width: 150%;
+            margin-left: -10px;
+            margin-top: 30px;
+            gap: 10px;
+        }
+        .container-black {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: fit-content;
+            padding: 100px 0;
+        }
+        .footer {
+            background-repeat: repeat;
+            background-size: 110%;
+            height: fit-content;
+        }
+        .footer-title {
+            margin-bottom: 10px;
+        }
+        .container-img-back {
+            background: #ff0000;
+        }
+        .container-blackk {
+            height: fit-content;
+        }
+        .container-img-back {
+            height: fit-content;
+            padding-bottom: 50px;
+        } 
+}

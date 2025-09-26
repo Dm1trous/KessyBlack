@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кесси блэк</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="section">
+        <!-- первый блок -->
+        <div class="container">
+            <!-- кнопка бургер -->
+            <div class="menu">
+                <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+                <label for="burger-checkbox" class="burger"></label>
+                <ul class="menu-list">
+                    <div class="line"></div>
+                    <h2 class="menu-title">Кесси Блек</h2>
+                    <li><a href="#bio" class="menu-item">БИОГРАФИЯ</a>
+                    <li>
+                    <li><a href="#disco" class="menu-item">Дискография</a>
+                    <li>
+                    <li><a href="#concert" class="menu-item">Концерты</a>
+                    <li>
+                    <li><a href="#SMI" class="menu-item">СМИ</a>
+                    <li>
+                    <li><a href="#news" class="menu-item">НОВОСТИ</a>
+                    <li>
+                    <li><a href="#footer" class="menu-item">КОНТАКТЫ</a>
+                    <li>
+                        <div class="socials1">
+                            <a href="#"><img src="img/vk.png" alt="ВК" class="social-img"></a>
+                            <a href="#"><img src="img/insta.png" alt="Инстаграмм" class="social-img"></a>
+                            <a href="#"><img src="img/yandex.png" alt="Яндекс музыка" class="social-img"></a>
+                            <a href="#"><img src="img/apple.png" alt="Apple музыка" class="social-img"></a>
+                            <a href="#"><img src="img/youtube.png" alt="Ютуб" class="social-img"></a>
+                        </div>
+                        <p class="menu-text">Все права защищены (с) Author Music 2024</p>
+                </ul>
+            </div>
+            <div class="line"></div>
+            <div class="container-content container-content1">
+                <a href="/"><img src="/img/logo.png" alt="Лого" class="container-img-logo"></a>
+                <img src="/img/kessy1.png" alt="Кесси" class="container-img-kessy">
+            </div>
+        </div>
+        <!-- второй блок -->
+        <div class="container container-grid container-blackk" id="bio">
+            <div class="black">
+                <div class="container-grid1">
+                    <h2 class="container-title">Биография</h2>
+                    <p class="container-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. </p>
+                </div>
+            </div>
+            <div class="container-grid2 grid-none">
+                <img src="img/kessy2.png" alt="Кесси" class="container-img-kessy2">
+            </div>
+        </div>
+        <!-- третий блок -->
+        <div class="container container-grid container-img-back" id="disco">
+            <div class="container-grid1 grid-none">
+            </div>
+            <div class="container-grid2">
+                <h2 class="container-title">Дискография</h2>
+                <div class="discs">
+                    <div class="disc">
+                        <div class="disc-flex1">
+                            <audio id=audio src="audio/durak.mp3" controls class="audio"></audio>
+                            <img id=img src="img/play.png" onclick="playPause()" class="container-img-play" />
+                            <p class="disc-text">Кейсси Блэк - Название трека</p>
+                        </div>
+                        <div class="disc-flex2">
+                            <p class="disc-time">2:35</p>
+                        </div>
+                    </div>
+                    <div class="disc">
+                        <div class="disc-flex1">
+                            <audio id=audio2 src="audio/9clock.mp3" controls class="audio"></audio>
+                            <img id=img2 src="img/play.png" onclick="playPause2()" class="container-img-play" />
+                            <p class="disc-text">Кейсси Блэк - Название трека</p>
+                        </div>
+                        <div class="disc-flex2">
+                            <p class="disc-time">2:35</p>
+                        </div>
+                    </div>
+                    <div class="disc">
+                        <div class="disc-flex1">
+                            <audio id=audio3 src="audio/durak.mp3" controls class="audio"></audio>
+                            <img id=img3 src="img/play.png" onclick="playPause3()" class="container-img-play" />
+                            <p class="disc-text">Кейсси Блэк - Название трека</p>
+                        </div>
+                        <div class="disc-flex2">
+                            <p class="disc-time">2:35</p>
+                        </div>
+                    </div>
+                    <div class="disc">
+                        <div class="disc-flex1">
+                            <audio id=audio4 src="audio/9clock.mp3" controls class="audio"></audio>
+                            <img id=img4 src="img/play.png" onclick="playPause4()" class="container-img-play" />
+                            <p class="disc-text">Кейсси Блэк - Название трека</p>
+                        </div>
+                        <div class="disc-flex2">
+                            <p class="disc-time">2:35</p>
+                        </div>
+                    </div>
+                    <div class="disc">
+                        <div class="disc-flex1">
+                            <audio id=audio5 src="audio/durak.mp3" controls class="audio"></audio>
+                            <img id=img5 src="img/play.png" onclick="playPause5()" class="container-img-play" />
+                            <p class="disc-text">Кейсси Блэк - Название трека</p>
+                        </div>
+                        <div class="disc-flex2">
+                            <p class="disc-time">2:35</p>
+                        </div>
+                    </div>
+                    <div class="disc">
+                        <div class="disc-flex1">
+                            <audio id=audio6 src="audio/9clock.mp3" controls class="audio"></audio>
+                            <img id=img6 src="img/play.png" onclick="playPause6()" class="container-img-play" />
+                            <p class="disc-text">Кейсси Блэк - Название трека</p>
+                        </div>
+                        <div class="disc-flex2">
+                            <p class="disc-time">2:35</p>
+                        </div>
+                    </div>
+                    <div class="disc">
+                        <div class="disc-flex1">
+                            <audio id=audio7 src="audio/durak.mp3" controls class="audio"></audio>
+                            <img id=img7 src="img/play.png" onclick="playPause7()" class="container-img-play" />
+                            <p class="disc-text">Кейсси Блэк - Название трека</p>
+                        </div>
+                        <div class="disc-flex2">
+                            <p class="disc-time">2:35</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- четвертый блок -->
+        <div class="container container-img-back2" id="concert">
+            <div class="container-content container-content2">
+                <h2 class="container-title container-title-center">Концерты</h2>
+                <div class="concert-grid">
+                    <div class="concert-grid-card concert-grid-card1">
+                        <h1 class="concert-grid-card-title">1.05</h1>
+                        <h2 class="concert-grid-card-subtitle">«Депо»</h2>
+                        <p class="concert-grid-card-text concert-grid-card-text1">Lesnaya Ulitsa, 20 стр.3 </p>
+                        <p class="concert-grid-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum.</p>
+                        <a href="/" class="btn">Купить билет</a>
+                    </div>
+                    <div class="concert-grid-card concert-grid-card-red">
+                        <h1 class="concert-grid-card-title">30.05</h1>
+                        <h2 class="concert-grid-card-subtitle">«Депо»</h2>
+                        <p class="concert-grid-card-text concert-grid-card-text1">Lesnaya Ulitsa, 20 стр.3 </p>
+                        <p class="concert-grid-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum.</p>
+                        <a href="/" class="btn">Купить билет</a>
+                    </div>
+                    <div class="concert-grid-card concert-grid-card3">
+                        <h1 class="concert-grid-card-title">6.06</h1>
+                        <h2 class="concert-grid-card-subtitle">«Депо»</h2>
+                        <p class="concert-grid-card-text concert-grid-card-text1">Lesnaya Ulitsa, 20 стр.3 </p>
+                        <p class="concert-grid-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum.</p>
+                        <a href="/" class="btn">Купить билет</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- пятый блок -->
+        <div class="container container-smi" id="SMI">
+            <div class="container-content container-content2">
+                <h2 class="container-title container-title-center">СМИ</h2>
+                <div class="concert-grid">
+                    <div class="concert-grid-card">
+                        <h2 class="concert-grid-card-subtitle concert-grid-card-subtitle1">Forbes</h2>
+                        <p class="concert-grid-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum.</p>
+                        <a href="/" class="forbes-a">Подробнее</a>
+                    </div>
+                    <div class="concert-grid-card">
+                        <h2 class="concert-grid-card-subtitle concert-grid-card-subtitle1">Forbes</h2>
+                        <p class="concert-grid-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum.</p>
+                        <a href="/" class="forbes-a">Подробнее</a>
+                    </div>
+                    <div class="concert-grid-card">
+                        <h2 class="concert-grid-card-subtitle concert-grid-card-subtitle1">Forbes</h2>
+                        <p class="concert-grid-card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum.</p>
+                        <a href="/" class="forbes-a">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- шестой блок -->
+        <div class="container  container-img-back3" id="news">
+            <div class="container-content container-content2">
+                <h2 class="container-title container-title-center">НОВОСТИ</h2>
+                <div class="concert-grid">
+                    <div class="concert-grid-card1">
+                        <h2 class="concert-grid-card-subtitle concert-grid-card-subtitle2 concert-grid-card-subtitle1">
+                            Длинный заголовок новости</h2>
+                        <p class="concert-grid-card-text concert-grid-card-text2">Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                            in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p class="news-date">24 мая 2024</p>
+                        <a href="/" class="forbes-a">Подробнее</a>
+                    </div>
+                    <div class="concert-grid-card1">
+                        <h2 class="concert-grid-card-subtitle concert-grid-card-subtitle2 concert-grid-card-subtitle1">
+                            Длинный заголовок новости</h2>
+                        <p class="concert-grid-card-text concert-grid-card-text2">Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                            in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p class="news-date">24 мая 2024</p>
+                        <a href="/" class="forbes-a">Подробнее</a>
+                    </div>
+                    <div class="concert-grid-card1">
+                        <h2 class="concert-grid-card-subtitle concert-grid-card-subtitle2 concert-grid-card-subtitle1">
+                            Длинный заголовок новости</h2>
+                        <p class="concert-grid-card-text concert-grid-card-text2">Lorem ipsum dolor sit amet,
+                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                            in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p class="news-date">24 мая 2024</p>
+                        <a href="/" class="forbes-a">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- седьмой блок-->
+        <div class="container container-black" id="subscribe">
+            <div class="container-content container-content2">
+                <h2 class="title-black">БЛЭК</h2>
+                <form action="#" class="form">
+                    <input type="email" class="black-email" required placeholder="Почта">
+                    <button class="form-btn">Подписаться на новости</button>
+                    <div class="checkbox-flex">
+                        <input type="checkbox" name="#" id="check" required class="check">
+                        <label for="check" class="checkbox-text">Я согласен с политикой конфиденциальности и получать
+                            рассылку</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+        </div>
+        <!-- подвал -->
+        <footer class="footer" id="footer">
+            <div class="footer-content">
+                <h2 class="container-title container-title-center footer-title">КЕССИ БЛЕК</h2>
+                <a href="tel:+79600000000">
+                    <p class="footer-text">+7 960 000 00 00</p>
+                </a>
+                <a href="mailto:kessi@authormusic.com">
+                    <p class="footer-text">kessi@authormusic.com</p>
+                </a>
+            </div>
+            <div class="socials">
+                <a href="#"><img src="img/vk.png" alt="ВК" class="social-img"></a>
+                <a href="#"><img src="img/insta.png" alt="Инстаграмм" class="social-img"></a>
+                <a href="#"><img src="img/yandex.png" alt="Яндекс музыка" class="social-img"></a>
+                <a href="#"><img src="img/apple.png" alt="Apple музыка" class="social-img"></a>
+                <a href="#"><img src="img/youtube.png" alt="Ютуб" class="social-img"></a>
+            </div>
+            <p class="footer-text footer-text2">Все права защищены (с) Author Music 2024</p>
+        </footer>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

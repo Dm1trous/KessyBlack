@@ -1,123 +1,106 @@
-const playPause = _ => {
-   if(audio.paused){
-      audio.play();
-      img.src = "../img/pause.png";
-   }else{
-      audio.pause();
-      img.src = "../img/play.png";
-   }
+let currentlyPlayingAudio = null;
+const PAUSE_IMG = "../img/pause.png";
+const PLAY_IMG = "../img/play.png";
+
+function closeMenu() {
+    document.getElementById('burger-checkbox').checked = false;
 }
 
-const playPause2 = _ => {
-    if(audio2.paused){
-       audio2.play();
-       img2.src = "../img/pause.png";
-    }else{
-       audio2.pause();
-       img2.src = "../img/play.png";
-    }
- }
+/**
+ * @param {HTMLElement} buttonElement 
+ * @param {string} audioId 
+ */
+function togglePlayPause(buttonElement, audioId) {
+    const audio = document.getElementById(audioId);
 
- const playPause3 = _ => {
-    if(audio3.paused){
-       audio3.play();
-       img3.src = "../img/pause.png";
-    }else{
-       audio3.pause();
-       img3.src = "../img/play.png";
-    }
- }
+    if (!audio) return;
 
- const playPause4 = _ => {
-    if(audio4.paused){
-       audio4.play();
-       img4.src = "../img/pause.png";
-    }else{
-       audio4.pause();
-       img4.src = "../img/play.png";
-    }
- }
+    if (audio.paused) {
+        if (currentlyPlayingAudio && currentlyPlayingAudio !== audio) {
+            currentlyPlayingAudio.pause();
+            const prevButton = currentlyPlayingAudio.closest('.disc').querySelector('.container-img-play');
+            if (prevButton) {
+                prevButton.src = PLAY_IMG;
+            }
+        }
 
- const playPause5 = _ => {
-    if(audio5.paused){
-       audio5.play();
-       img5.src = "../img/pause.png";
-    }else{
-       audio5.pause();
-       img5.src = "../img/play.png";
-    }
- }
+        audio.play();
+        buttonElement.src = PAUSE_IMG;
+        
+        currentlyPlayingAudio = audio;
 
- const playPause6 = _ => {
-    if(audio6.paused){
-       audio6.play();
-       img6.src = "../img/pause.png";
-    }else{
-       audio6.pause();
-       img6.src = "../img/play.png";
+    } else {
+        audio.pause();
+        buttonElement.src = PLAY_IMG;
+        
+        currentlyPlayingAudio = null;
     }
- }
-
- const playPause7 = _ => {
-    if(audio7.paused){
-       audio7.play();
-       img7.src = "../img/pause.png";
-    }else{
-       audio7.pause();
-       img7.src = "../img/play.png";
-    }
- }
-
- function isOnVisibleSpace(element) {
-	var bodyHeight = window.innerHeight;
-  var elemRect = element.getBoundingClientRect();
-  var offset   = elemRect.top;
-  if(offset<0) return false;
-  if(offset>bodyHeight) return false;
-  return true;
 }
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('title-black-animation');
-      }
-    });
-  });
-  observer.observe(document.querySelector('.title-black'));
+function initializeDragScroll() {
+    const slider = document.querySelector('.draggable');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
 
-  const observer2 = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('container-img-kessy-animation');
-      }
-    });
-  });
-  observer2.observe(document.querySelector('.container-img-kessy'));
+    if (!slider) return;
 
-  const observer3 = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('concert-grid-card-animation');
-      }
+    slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        slider.classList.add('dragging');
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
     });
-  });
-  observer3.observe(document.querySelector('.concert-grid-card'));
 
-  const observer4 = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('concert-grid-card-animation2');
-      }
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+        slider.classList.remove('dragging');
     });
-  });
-  observer4.observe(document.querySelector('.concert-grid-card-red'));
 
-  const observer5 = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('concert-grid-card-animation3');
-      }
+    slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.classList.remove('dragging');
     });
-  });
-  observer5.observe(document.querySelector('.concert-grid-card3'));
+
+    slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2; 
+        slider.scrollLeft = scrollLeft - walk;
+    });
+}
+
+
+function createObserver(selector, className, options = { threshold: 0.1 }) {
+    const elements = document.querySelectorAll(selector);
+    
+    if (elements.length === 0) return;
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add(className);
+            }
+        });
+    }, options);
+
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    initializeDragScroll();
+    
+    createObserver('.title-black', 'title-black-animation', { threshold: 0.5 });
+
+    createObserver('.container-img-kessy', 'container-img-kessy-animation', { threshold: 0.1 });
+    
+    createObserver('.container-img-kessy3', 'container-img-kessy3-animation', { threshold: 0.2 });
+
+    createObserver('.concert-grid-card1', 'concert-grid-card-animation', { threshold: 0.2 });
+    createObserver('.concert-grid-card-red', 'concert-grid-card-animation2', { threshold: 0.2 });
+    createObserver('.concert-grid-card3', 'concert-grid-card-animation3', { threshold: 0.2 });
+});

@@ -10,26 +10,24 @@
 
 <body>
     <section class="section">
-        <!-- первый блок -->
         <div class="container">
-            <!-- кнопка бургер -->
             <div class="menu">
                 <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
                 <label for="burger-checkbox" class="burger"></label>
                 <ul class="menu-list">
                     <div class="line"></div>
                     <h2 class="menu-title">Кесси Блек</h2>
-                    <li><a href="#bio" class="menu-item">БИОГРАФИЯ</a>
+                    <li><a href="#bio" class="menu-item" onclick="closeMenu()">БИОГРАФИЯ</a>
                     <li>
-                    <li><a href="#disco" class="menu-item">Дискография</a>
+                    <li><a href="#disco" class="menu-item" onclick="closeMenu()">Дискография</a>
                     <li>
-                    <li><a href="#concert" class="menu-item">Концерты</a>
+                    <li><a href="#concert" class="menu-item" onclick="closeMenu()">Концерты</a>
                     <li>
-                    <li><a href="#SMI" class="menu-item">СМИ</a>
+                    <li><a href="#SMI" class="menu-item" onclick="closeMenu()">СМИ</a>
                     <li>
-                    <li><a href="#news" class="menu-item">НОВОСТИ</a>
+                    <li><a href="#news" class="menu-item" onclick="closeMenu()">НОВОСТИ</a>
                     <li>
-                    <li><a href="#footer" class="menu-item">КОНТАКТЫ</a>
+                    <li><a href="#footer" class="menu-item" onclick="closeMenu()">КОНТАКТЫ</a>
                     <li>
                         <div class="socials1">
                             <a href="#"><img src="./img/vk.png" alt="ВК" class="social-img"></a>
@@ -47,7 +45,6 @@
                 <img src="./img/kessy1.png" alt="Кесси" class="container-img-kessy">
             </div>
         </div>
-        <!-- второй блок -->
         <div class="container container-grid container-blackk" id="bio">
             <div class="black">
                 <div class="container-grid1">
@@ -68,21 +65,21 @@
                 </div>
             </div>
             <div class="container-grid2 grid-none">
-                <img src="img/kessy2.png" alt="Кесси" class="container-img-kessy2">
+                <img src="./img/kessy2.png" alt="Кесси" class="container-img-kessy2">
             </div>
         </div>
-        <!-- третий блок -->
         <div class="container container-grid container-img-back" id="disco">
-            <div class="container-grid1 grid-none">
+            <div class="container-grid1 kessy3-block grid-none">
+                <img src="./img/kessy3.png" alt="Кесси" class="container-img-kessy3">
             </div>
-            <div class="container-grid2">
+            <div class="container-grid2 discography-list">
                 <h2 class="container-title">Дискография</h2>
                 <div class="discs">
                     <div class="disc">
                         <div class="disc-flex1">
-                            <audio id=audio src="audio/durak.mp3" controls class="audio"></audio>
-                            <img id=img src="img/play.png" onclick="playPause()" class="container-img-play" />
-                            <p class="disc-text">Кейсси Блэк - Название трека</p>
+                            <audio id="audio1" src="audio/durak.mp3" controls class="audio"></audio>
+                            <img id="img1" src="./img/play.png" onclick="togglePlayPause(this, 'audio1')" class="container-img-play" />
+                            <p class="disc-text">Кейсси Блэк - Название трека 1</p>
                         </div>
                         <div class="disc-flex2">
                             <p class="disc-time">2:35</p>
@@ -90,9 +87,9 @@
                     </div>
                     <div class="disc">
                         <div class="disc-flex1">
-                            <audio id=audio2 src="audio/9clock.mp3" controls class="audio"></audio>
-                            <img id=img2 src="img/play.png" onclick="playPause2()" class="container-img-play" />
-                            <p class="disc-text">Кейсси Блэк - Название трека</p>
+                            <audio id="audio2" src="audio/9clock.mp3" controls class="audio"></audio>
+                            <img id="img2" src="./img/play.png" onclick="togglePlayPause(this, 'audio2')" class="container-img-play" />
+                            <p class="disc-text">Кейсси Блэк - Название трека 2</p>
                         </div>
                         <div class="disc-flex2">
                             <p class="disc-time">2:35</p>
@@ -100,9 +97,9 @@
                     </div>
                     <div class="disc">
                         <div class="disc-flex1">
-                            <audio id=audio3 src="audio/durak.mp3" controls class="audio"></audio>
-                            <img id=img3 src="img/play.png" onclick="playPause3()" class="container-img-play" />
-                            <p class="disc-text">Кейсси Блэк - Название трека</p>
+                            <audio id="audio3" src="audio/durak.mp3" controls class="audio"></audio>
+                            <img id="img3" src="img/play.png" onclick="togglePlayPause(this, 'audio3')" class="container-img-play" />
+                            <p class="disc-text">Кейсси Блэк - Название трека 3</p>
                         </div>
                         <div class="disc-flex2">
                             <p class="disc-time">2:35</p>
@@ -110,9 +107,9 @@
                     </div>
                     <div class="disc">
                         <div class="disc-flex1">
-                            <audio id=audio4 src="audio/9clock.mp3" controls class="audio"></audio>
-                            <img id=img4 src="img/play.png" onclick="playPause4()" class="container-img-play" />
-                            <p class="disc-text">Кейсси Блэк - Название трека</p>
+                            <audio id="audio4" src="audio/9clock.mp3" controls class="audio"></audio>
+                            <img id="img4" src="./img/play.png" onclick="togglePlayPause(this, 'audio4')" class="container-img-play" />
+                            <p class="disc-text">Кейсси Блэк - Название трека 4</p>
                         </div>
                         <div class="disc-flex2">
                             <p class="disc-time">2:35</p>
@@ -120,9 +117,9 @@
                     </div>
                     <div class="disc">
                         <div class="disc-flex1">
-                            <audio id=audio5 src="audio/durak.mp3" controls class="audio"></audio>
-                            <img id=img5 src="img/play.png" onclick="playPause5()" class="container-img-play" />
-                            <p class="disc-text">Кейсси Блэк - Название трека</p>
+                            <audio id="audio5" src="audio/durak.mp3" controls class="audio"></audio>
+                            <img id="img5" src="./img/play.png" onclick="togglePlayPause(this, 'audio5')" class="container-img-play" />
+                            <p class="disc-text">Кейсси Блэк - Название трека 5</p>
                         </div>
                         <div class="disc-flex2">
                             <p class="disc-time">2:35</p>
@@ -130,9 +127,9 @@
                     </div>
                     <div class="disc">
                         <div class="disc-flex1">
-                            <audio id=audio6 src="audio/9clock.mp3" controls class="audio"></audio>
-                            <img id=img6 src="img/play.png" onclick="playPause6()" class="container-img-play" />
-                            <p class="disc-text">Кейсси Блэк - Название трека</p>
+                            <audio id="audio6" src="audio/9clock.mp3" controls class="audio"></audio>
+                            <img id="img6" src="./img/play.png" onclick="togglePlayPause(this, 'audio6')" class="container-img-play" />
+                            <p class="disc-text">Кейсси Блэк - Название трека 6</p>
                         </div>
                         <div class="disc-flex2">
                             <p class="disc-time">2:35</p>
@@ -140,9 +137,9 @@
                     </div>
                     <div class="disc">
                         <div class="disc-flex1">
-                            <audio id=audio7 src="audio/durak.mp3" controls class="audio"></audio>
-                            <img id=img7 src="img/play.png" onclick="playPause7()" class="container-img-play" />
-                            <p class="disc-text">Кейсси Блэк - Название трека</p>
+                            <audio id="audio7" src="audio/durak.mp3" controls class="audio"></audio>
+                            <img id="img7" src="./img/play.png" onclick="togglePlayPause(this, 'audio7')" class="container-img-play" />
+                            <p class="disc-text">Кейсси Блэк - Название трека 7</p>
                         </div>
                         <div class="disc-flex2">
                             <p class="disc-time">2:35</p>
@@ -151,7 +148,6 @@
                 </div>
             </div>
         </div>
-        <!-- четвертый блок -->
         <div class="container container-img-back2" id="concert">
             <div class="container-content container-content2">
                 <h2 class="container-title container-title-center">Концерты</h2>
@@ -195,7 +191,6 @@
                 </div>
             </div>
         </div>
-        <!-- пятый блок -->
         <div class="container container-smi" id="SMI">
             <div class="container-content container-content2">
                 <h2 class="container-title container-title-center">СМИ</h2>
@@ -233,51 +228,69 @@
                 </div>
             </div>
         </div>
-        <!-- шестой блок -->
-        <div class="container  container-img-back3" id="news">
+        <div class="container container-img-back3" id="news">
             <div class="container-content container-content2">
                 <h2 class="container-title container-title-center">НОВОСТИ</h2>
-                <div class="concert-grid">
-                    <div class="concert-grid-card1">
-                        <h2 class="concert-grid-card-subtitle concert-grid-card-subtitle2 concert-grid-card-subtitle1">
-                            Длинный заголовок новости</h2>
-                        <p class="concert-grid-card-text concert-grid-card-text2">Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-                            in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p class="news-date">24 мая 2024</p>
-                        <a href="/" class="forbes-a">Подробнее</a>
-                    </div>
-                    <div class="concert-grid-card1">
-                        <h2 class="concert-grid-card-subtitle concert-grid-card-subtitle2 concert-grid-card-subtitle1">
-                            Длинный заголовок новости</h2>
-                        <p class="concert-grid-card-text concert-grid-card-text2">Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-                            in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p class="news-date">24 мая 2024</p>
-                        <a href="/" class="forbes-a">Подробнее</a>
-                    </div>
-                    <div class="concert-grid-card1">
-                        <h2 class="concert-grid-card-subtitle concert-grid-card-subtitle2 concert-grid-card-subtitle1">
-                            Длинный заголовок новости</h2>
-                        <p class="concert-grid-card-text concert-grid-card-text2">Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
-                            in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p class="news-date">24 мая 2024</p>
-                        <a href="/" class="forbes-a">Подробнее</a>
+                <div class="news-scroll-container draggable">
+                    <div class="news-flex-row">
+                        <div class="news-card">
+                            <h2 class="concert-grid-card-subtitle concert-grid-card-subtitle2 concert-grid-card-subtitle1">
+                                Длинный заголовок новости 1</h2>
+                            <p class="concert-grid-card-text concert-grid-card-text2">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                aliqua...</p>
+                            <p class="news-date">24 мая 2024</p>
+                            <a href="/" class="forbes-a">Подробнее</a>
+                        </div>
+                        <div class="news-card">
+                            <h2 class="concert-grid-card-subtitle concert-grid-card-subtitle2 concert-grid-card-subtitle1">
+                                Длинный заголовок новости 2</h2>
+                            <p class="concert-grid-card-text concert-grid-card-text2">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                aliqua...</p>
+                            <p class="news-date">25 мая 2024</p>
+                            <a href="/" class="forbes-a">Подробнее</a>
+                        </div>
+                        <div class="news-card">
+                            <h2 class="concert-grid-card-subtitle concert-grid-card-subtitle2 concert-grid-card-subtitle1">
+                                Длинный заголовок новости 3</h2>
+                            <p class="concert-grid-card-text concert-grid-card-text2">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                aliqua...</p>
+                            <p class="news-date">26 мая 2024</p>
+                            <a href="/" class="forbes-a">Подробнее</a>
+                        </div>
+                        <div class="news-card">
+                            <h2 class="concert-grid-card-subtitle concert-grid-card-subtitle2 concert-grid-card-subtitle1">
+                                Длинный заголовок новости 4</h2>
+                            <p class="concert-grid-card-text concert-grid-card-text2">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                aliqua...</p>
+                            <p class="news-date">27 мая 2024</p>
+                            <a href="/" class="forbes-a">Подробнее</a>
+                        </div>
+                        <div class="news-card">
+                            <h2 class="concert-grid-card-subtitle concert-grid-card-subtitle2 concert-grid-card-subtitle1">
+                                Длинный заголовок новости 5</h2>
+                            <p class="concert-grid-card-text concert-grid-card-text2">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                aliqua...</p>
+                            <p class="news-date">28 мая 2024</p>
+                            <a href="/" class="forbes-a">Подробнее</a>
+                        </div>
+                        <div class="news-card">
+                            <h2 class="concert-grid-card-subtitle concert-grid-card-subtitle2 concert-grid-card-subtitle1">
+                                Длинный заголовок новости 6</h2>
+                            <p class="concert-grid-card-text concert-grid-card-text2">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                aliqua...</p>
+                            <p class="news-date">29 мая 2024</p>
+                            <a href="/" class="forbes-a">Подробнее</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- седьмой блок-->
         <div class="container container-black" id="subscribe">
             <div class="container-content container-content2">
                 <h2 class="title-black">БЛЭК</h2>
@@ -293,7 +306,6 @@
             </div>
         </div>
         </div>
-        <!-- подвал -->
         <footer class="footer" id="footer">
             <div class="footer-content">
                 <h2 class="container-title container-title-center footer-title">КЕССИ БЛЕК</h2>
@@ -305,16 +317,16 @@
                 </a>
             </div>
             <div class="socials">
-                <a href="#"><img src="img/vk.png" alt="ВК" class="social-img"></a>
-                <a href="#"><img src="img/insta.png" alt="Инстаграмм" class="social-img"></a>
-                <a href="#"><img src="img/yandex.png" alt="Яндекс музыка" class="social-img"></a>
-                <a href="#"><img src="img/apple.png" alt="Apple музыка" class="social-img"></a>
-                <a href="#"><img src="img/youtube.png" alt="Ютуб" class="social-img"></a>
+                <a href="#"><img src="./img/vk.png" alt="ВК" class="social-img"></a>
+                <a href="#"><img src="./img/insta.png" alt="Инстаграмм" class="social-img"></a>
+                <a href="#"><img src="./img/yandex.png" alt="Яндекс музыка" class="social-img"></a>
+                <a href="#"><img src="./img/apple.png" alt="Apple музыка" class="social-img"></a>
+                <a href="#"><img src="./img/youtube.png" alt="Ютуб" class="social-img"></a>
             </div>
             <p class="footer-text footer-text2">Все права защищены (с) Author Music 2024</p>
         </footer>
     </section>
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

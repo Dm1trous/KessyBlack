@@ -467,6 +467,11 @@ body {
     font-weight: 800;
     font-size: 18px;
     padding: 5px;
+    transition: 0.2s all ease-in-out;
+}
+
+.forbes-a:hover {
+    scale: 1.02;
 }
 
 .concert-grid-card-subtitle1 {
